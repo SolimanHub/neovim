@@ -65,3 +65,11 @@ autocmd FileType php vmap <Leader>c :s/\%V$$.*$$\%V/#\1/<CR>
   inoremap 'b <C-o>/
   inoremap OO <C-o>O
   inoremap hj <C-o>j
+
+  "Escribir al interior 
+  inoremap {<CR> {<CR>}<CR><C-o>k<C-o>O
+  inoremap {<Space> {}<C-o>h<C-o>i
+  inoremap (<Space> ()<C-o>h<C-o>i
+  inoremap [<Space> []<C-o>h<C-o>i
+  inoremap '<Space> ''<C-o>h<C-o>i
+  inoremap "<Space> ""<C-o>h<C-o>i
