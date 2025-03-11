@@ -44,9 +44,12 @@ autocmd FileType javascript vmap <Leader>c :s/\%V$$.*$$\%V/\/\/\1/<CR>
 autocmd FileType php vmap <Leader>c :s/\%V$$.*$$\%V/#\1/<CR>
 
   ""Correr el cursor un espacio a la derecha en modo edicion
-  inoremap hl <C-o>a
-  inoremap hk <C-o>k
-  inoremap jk <Esc>
+  inoremap kl <C-o>l
+  inoremap kj <C-o>h
+  inoremap ki <C-o>k
+  inoremap km <C-o>j
+  inoremap kk <Esc>
+  
   inoremap a` á
   inoremap e` é
   inoremap i` í
