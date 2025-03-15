@@ -1,1 +1,3 @@
-# Construyendo nueva configuracion `Neovim`
+# Configuracion base de Neovim
+
+David Soliman
