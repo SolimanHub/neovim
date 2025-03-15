@@ -20,6 +20,7 @@ vim.keymap.set("i","{","{}<ESC>i")
 vim.keymap.set("i","(","()<ESC>i")
 vim.keymap.set("i","[","[]<ESC>i")
 vim.keymap.set("i","\"","\"\"<ESC>i")
+vim.keymap.set("i","\'","\'\'<ESC>i")
 
 vim.keymap.set("i","n`","ñ")
 
@@ -40,3 +41,5 @@ vim.keymap.set("n","<leader>w",":w!<CR>")
 vim.keymap.set("n","<leader>q",":q!<CR>")
 vim.keymap.set("n","<leader>t",":tabnew ")
 vim.keymap.set("n", "<leader>s", '<Plug>(easymotion-s2)', {noremap = true, silent = true})
+
+
