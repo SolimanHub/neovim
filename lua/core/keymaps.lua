@@ -42,4 +42,10 @@ vim.keymap.set("n","<leader>q",":q!<CR>")
 vim.keymap.set("n","<leader>t",":tabnew ")
 vim.keymap.set("n", "<leader>s", '<Plug>(easymotion-s2)', {noremap = true, silent = true})
 
+-- Mapeos para completado
+vim.keymap.set("i", "<C-Space>", "<Cmd>lua require('cmp').complete()<CR>")
+vim.keymap.set("i", "<C-e>", "<Cmd>lua require('cmp').close()<CR>")
+
+-- Expansión de Emmet con <C-y>,
+vim.keymap.set('i', '<C-y>', '<Plug>(emmet-expand-abbr)', { noremap = true, silent = true })
 
