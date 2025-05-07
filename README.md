@@ -14,7 +14,7 @@ yay -S nvim-packer-git  # Instalar Packer desde AUR
 
 2. **Clonar configuración:**
 ```bash
-git clone https://github.com/solimanhub/nvim-config ~/.config/nvim
+git clone https://github.com/SolimanHub/neovim.git ~/.config/nvim
 ```
 
 3. **Instalar plugins:**
