@@ -1,6 +1,7 @@
 local lspconfig = require('lspconfig')
 local mason = require('mason')
 local mason_lsp = require('mason-lspconfig')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- Configuración base para servidores LSP
 local on_attach = function(client, bufnr)
@@ -12,22 +13,30 @@ end
 mason.setup()
 mason_lsp.setup({
   ensure_installed = {
-    'html',           -- HTML
+    'html',
     'emmet_ls',
-    'cssls',          -- CSS
-    'intelephense',   -- PHP
-    'lua_ls',         -- Lua
-    'clangd',         -- C/C++
-    'sqlls',          -- SQL
-    'pyright',         -- Python
-    'tsserver',       -- JavaScript/TypeScript
-    'rust_analyzer',  -- Rust
-    'gopls',          -- Go
-    'jdtls',          -- Java
-    'jsonls',         -- JSON
-    'yamlls',         -- YAML
-    'dockerls',       -- Docker
-    'bashls'          -- Bash
+    'cssls',
+    'intelephense',
+    'lua_ls',
+    'clangd',
+    'sqlls',
+    'pyright',
+    'tsserver',
+    'rust_analyzer', -- Nombre oficial del servidor
+    'gopls',
+    'jdtls',
+    'jsonls',
+    'yamlls',
+    'dockerls',
+    'bashls'
+  },
+  handlers = {
+    function(server_name)
+      lspconfig[server_name].setup({
+        on_attach = on_attach,
+        capabilities = capabilities
+      })
+    end,
   }
 })
 
@@ -38,15 +47,6 @@ lspconfig.emmet_ls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { 'html', 'javascriptreact', 'typescriptreact', 'css' }
-})
-
-mason_lsp.setup_handlers({
-  function(server_name)
-    lspconfig[server_name].setup({
-      on_attach = on_attach,
-      capabilities = require('cmp_nvim_lsp').default_capabilities()
-    })
-  end,
 })
 
 -- Configuración para C/C++

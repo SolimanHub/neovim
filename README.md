@@ -28,7 +28,8 @@ nvim +PackerSync
 
 ```bash
 # Lenguajes base
-sudo pacman -S lua-language-server-git clang python-pylsp php-inteliphense nodejs-typescript-language-server
+yay -S lua-language-server-git
+sudo pacman -S clang python-pylsp php-inteliphense nodejs-typescript-language-server
 
 # Herramientas complementarias
 sudo pacman -S shellcheck bash-language-server yamllint docker-compose
@@ -120,7 +121,7 @@ nvim +PackerUpdate +MasonUpdate +LspInstallInfo
 
 ## ⚠️ Solución de Problemas Comunes
 ```bash
-sudo pacman -S lua-language-server-git  # Desde Actualizar
+yay -S lua-language-server-git  # Desde Actualizar
 :NvimTreeRefresh  # Recargar estructura de proyectos
 ```
 
